@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/chris48s/approve-bot#readme",
   "dependencies": {
-    "@actions/core": "^1.2.0",
+    "@actions/core": "^1.2.5",
     "@actions/github": "^1.1.0"
   }
 }
