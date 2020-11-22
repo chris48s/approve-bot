@@ -43,7 +43,9 @@ function isPointlessGatsbyBump(body) {
   }
   const changelogLines = lines
     .slice(start, end)
-    .filter((line) => !line.startsWith("<h"));
+    .filter((line) => !line.startsWith("<h"))
+    .filter((line) => !line.startsWith("<p>All notable changes"))
+    .filter((line) => !line.startsWith('See <a href="https://conventionalcommits.org">'));
   return allChangelogLinesAreVersionBump(changelogLines);
 }
 
