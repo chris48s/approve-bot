@@ -45,7 +45,8 @@ function isPointlessGatsbyBump(body) {
     .slice(start, end)
     .filter((line) => !line.startsWith("<h"))
     .filter((line) => !line.startsWith("<p>All notable changes"))
-    .filter((line) => !line.startsWith('See <a href="https://conventionalcommits.org">'));
+    .filter((line) => !line.startsWith('See <a href="https://conventionalcommits.org">'))
+    .filter((line) => !line.startsWith("<!--"));
   return allChangelogLinesAreVersionBump(changelogLines);
 }
 
